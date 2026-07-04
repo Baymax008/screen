@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 class Screen1 extends StatefulWidget {
   const Screen1({super.key});
 
@@ -14,6 +14,16 @@ class _Screen1State extends State<Screen1> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFF050B1D),
+bottomNavigationBar: ConvexAppBar(
+    items: [
+      TabItem(icon: Icons.home, title: 'Home'),
+      TabItem(icon: Icons.map, title: 'Discovery'),
+      TabItem(icon: Icons.add, title: 'Add'),
+      TabItem(icon: Icons.message, title: 'Message'),
+      TabItem(icon: Icons.people, title: 'Profile'),
+    ],
+    onTap: (int i) => print('click index=$i'),
+  ),
 
       appBar: AppBar(
         backgroundColor: const Color(0xFF06102F),
