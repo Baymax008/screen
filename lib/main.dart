@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:screen/screen/screen1.dart';
+import 'package:screen/screen/book_request.dart';
+import 'package:screen/screen/bookdetails.dart';
+import 'package:screen/screen/searchscreen.dart';
+import 'package:screen/screen/semesterbook.dart';
+import 'package:screen/screen/profilescreen.dart';
+import 'package:screen/screen/wishlist.dart';
 
 
 
@@ -20,8 +25,7 @@ class MyApp extends StatelessWidget {
       
         colorScheme:.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: Screen1(),
+      home: WishlistPage(),
     );
   }
 }
-

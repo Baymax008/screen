@@ -13,19 +13,29 @@ class _Screen1State extends State<Screen1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF050B1D),
-bottomNavigationBar: ConvexAppBar(
+      backgroundColor: const Color(0xFF06102F),
+bottomNavigationBar: ConvexAppBar(backgroundColor: const Color.fromARGB(255, 0, 71, 129),
     items: [
       TabItem(icon: Icons.home, title: 'Home'),
-      TabItem(icon: Icons.map, title: 'Discovery'),
-      TabItem(icon: Icons.add, title: 'Add'),
-      TabItem(icon: Icons.message, title: 'Message'),
+      TabItem(icon: Icons.map, title: 'My space'),
+      TabItem(icon: Icons.search, title: 'search'),
+      TabItem(icon: Icons.message, title: 'Messages'),
       TabItem(icon: Icons.people, title: 'Profile'),
     ],
-    onTap: (int i) => print('click index=$i'),
+     onTap: (int i) {
+  if (i == 1) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => Screen1(),
+      ),
+    );
+  }
+},
   ),
 
       appBar: AppBar(
+        centerTitle: false,
         backgroundColor: const Color(0xFF06102F),
         elevation: 0,
         leading: IconButton(
@@ -34,8 +44,7 @@ bottomNavigationBar: ConvexAppBar(
             Navigator.pop(context);
           },
         ),
-        title: const Text(
-          "Semester Books",
+        title: const Text("Semester Books",
           style: TextStyle(
             color: Colors.white,
             fontSize: 28,
